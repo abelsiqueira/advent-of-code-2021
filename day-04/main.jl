@@ -38,9 +38,13 @@ function main()
   solution_time = [solved_when(b, draw)[2] for b in boards]
   pos, b = findmin(solution_time)
   M = solved_when(boards[b], draw)[1]
+  score_win = sum(M[findall(M .≥ 0)]) * draw[pos]
 
+  pos, b = findmax(solution_time)
+  M = solved_when(boards[b], draw)[1]
+  score_lose = sum(M[findall(M .≥ 0)]) * draw[pos]
 
-  sum(M[findall(M .≥ 0)]) * draw[pos]
+  score_win, score_lose
 end
 
 main()
