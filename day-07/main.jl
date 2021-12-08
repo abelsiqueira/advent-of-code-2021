@@ -29,4 +29,4 @@ function main()
   γ, μ⁻, μ⁺, sum(abs, γ .- positions), sum(cost_sqr, μ⁻ .- positions), sum(cost_sqr, μ⁺ .- positions)
 end
 
-main()g
+main()
